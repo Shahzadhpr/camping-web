@@ -1520,6 +1520,10 @@ input[type="checkbox"]:checked::after {
 }
 
 @media (min-width:1200px) {
+	.header-content {
+		margin-top: 20rem;
+	}
+
 	.container {
 		width: 114rem;
 	}
