@@ -1,6 +1,6 @@
-# 🚀 Corporate Website
+# 🚀 Camping Website
 
-This project is a corporate website designed to enhance the user experience in the field of camping services. The website includes various sections such as registration, login, all of which are designed to be fully responsive.
+This project is a camping website designed to enhance the user experience in the field of camping services. The website includes various sections such as registration, login, all of which are designed to be fully responsive.
 
 &nbsp;
 
