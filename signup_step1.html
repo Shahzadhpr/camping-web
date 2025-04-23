@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampingWeb | SignUp</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container signin">
+      <div class="wrapper-signin wrapper-sp">
+        <form action="#" id="signupForm" class="signin-form">
+          <h1 class="signin-form__title">Sign Up</h1>
+          <p class="signin-form__account">
+            Already have an account?
+            <a href="signup.html" class="link-Signup">Sign Up.</a>
+          </p>
+          <div class="wrapper-input">
+            <!-- Username Input -->
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              required
+              minlength="3"
+              maxlength="20"
+              pattern="^(?!.*\.\.)(?!.*__)(?![_.])[a-zA-Z0-9._]+(?<![_.])$"
+              title="Username must be 3-20 characters long and can only contain letters, numbers, dots (.), or underscores (_). It cannot start or end with a dot or underscore." />
+
+            <!-- Password input with eye icon -->
+            <div class="password-container">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                maxlength="8"
+                required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@!%*?&])[A-Za-z\d$@!%*?&]{8,}$"
+                title="Password must be at least 8 characters, including uppercase, lowercase, number, and special character." />
+              <i
+                class="eye-icon fas fa-eye"
+                onclick="togglePasswordVisibility('password')"></i>
+            </div>
+
+            <!-- Confirm Password input with eye icon -->
+            <div class="password-container">
+              <input
+                type="password"
+                name="confirm_password"
+                id="confirm_password"
+                maxlength="8"
+                placeholder="Confirm Password"
+                required
+                oninput="checkPasswordMatch()" />
+              <i
+                class="eye-icon fas fa-eye"
+                onclick="togglePasswordVisibility('confirm_password')"></i>
+            </div>
+
+            <!-- Sign Up Button -->
+            <input type="submit" value="Sign Up" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Toggle password visibility for specific field
+      function togglePasswordVisibility(field) {
+        const inputField = document.getElementById(field);
+        const eyeIcon = inputField.nextElementSibling;
+
+        if (inputField.type === "password") {
+          inputField.type = "text";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          inputField.type = "password";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        }
+      }
+
+      // Check if passwords match
+      function checkPasswordMatch() {
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm_password");
+        if (password.value !== confirmPassword.value) {
+          confirmPassword.setCustomValidity("Passwords don't match");
+        } else {
+          confirmPassword.setCustomValidity("");
+        }
+      }
+    </script>
+  </body>
+</html>

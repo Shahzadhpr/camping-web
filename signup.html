@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampingWeb | SignUp</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container signin">
+      <div class="wrapper-signin wrapper-sp">
+        <form
+          action="signup_step1.html"
+          method="GET"
+          id="signupForm"
+          class="signin-form">
+          <h1 class="signin-form__title">Sign Up</h1>
+          <p class="signin-form__account">
+            Already have an account?
+            <a href="signin.html" class="link-Signup">Sign in.</a>
+          </p>
+          <div class="wrapper-input">
+            <!-- First and Last Name Inputs -->
+            <input
+              type="text"
+              name="first_name"
+              placeholder="First Name"
+              required
+              autofocus />
+
+            <input
+              type="text"
+              name="last_name"
+              placeholder="Last Name"
+              required />
+
+            <!-- Email or Phone Number -->
+            <input
+              type="text"
+              id="identifier"
+              name="identifier"
+              placeholder="Email or Phone Number"
+              required
+              pattern="^([^\s@]+@[^\s@]+\.[^\s@]+|[0-9]{10,15})$"
+              title="Enter a valid email or phone number." />
+
+            <!-- Terms and privacy agreement -->
+            <div class="terms-container">
+              <input type="checkbox" name="accept" id="accept_rules" required />
+              <label for="accept_rules" class="signin-form__lbl">
+                By signing up, you accept our
+                <a href="#" class="lbl-link">terms</a> and
+                <a href="#" class="lbl-link">privacy</a>.
+              </label>
+            </div>
+
+            <!-- Next Button -->
+            <input type="submit" value="Next" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

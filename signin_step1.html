@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampingWeb | SignIn</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container signin">
+      <div class="wrapper-signin">
+        <form action="#" class="signin-form" method="POST">
+          <h1 class="signin-form__title">Sign In</h1>
+          <p class="signin-form__account">
+            Don't have an account?
+            <a href="signin.html" class="link-Signup">Sign in here.</a>
+          </p>
+          <div class="wrapper-input">
+            <!-- Username input -->
+            <input
+              type="text"
+              id="identifier"
+              name="identifier"
+              placeholder="Email Or Phone number"
+              required
+              pattern="^([^\s@]+@[^\s@]+\.[^\s@]+|[0-9]{10,15})$"
+              title="Enter a valid email or phone number." />
+
+            <!-- Password input with eye icon -->
+            <div class="password-container">
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+                maxlength="8"
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@$%^&*])[A-Za-z\d!@$%^&*]{8,}$"
+                title="Password must be at least 8 characters long, with at least one uppercase letter, one lowercase letter, one number, and one special character." />
+              <i
+                class="eye-icon fas fa-eye"
+                onclick="togglePasswordVisibility()"></i>
+            </div>
+
+            <p class="signin-form__Forgot-step1">
+              Forgot your password?
+              <a href="forgot-password.html" class="link-forgot"
+                >Click here to reset it.</a
+              >
+            </p>
+
+            <input type="submit" value="Sign In" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      // Password Visibility Toggle Function
+      function togglePasswordVisibility() {
+        const passwordInput = document.querySelector('input[name="password"]');
+        const eyeIcon = document.querySelector(".eye-icon");
+
+        // Toggle the type of password field between password and text
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text"; // Show the password
+          eyeIcon.classList.remove("fa-eye"); // Change the icon to "eye-slash"
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password"; // Hide the password
+          eyeIcon.classList.remove("fa-eye-slash"); // Change the icon back to "eye"
+          eyeIcon.classList.add("fa-eye");
+        }
+      }
+    </script>
+  </body>
+</html>

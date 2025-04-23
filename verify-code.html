@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CampingWeb | Enter Verification Code</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="stylesheet" href="styles/app.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container signin">
+      <div class="wrapper-signin wrapper-signup">
+        <form action="#" id="verifyCodeForm" class="signin-form">
+          <h1 class="signin-form__title">Enter Verification Code</h1>
+          <p class="signin-form__account">
+            Don't have the code?
+            <a href="forgot-password.html" class="link-Signup"
+              >Request a new one.</a
+            >
+          </p>
+          <div class="wrapper-input">
+            <input
+              type="text"
+              name="verification_code"
+              placeholder="Verification Code"
+              maxlength="6"
+              required
+              autofocus />
+            <input type="submit" value="Verify Code" />
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>

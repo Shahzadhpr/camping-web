@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Your Account</title>
+    <link rel="icon" type="image/png" href="images/app-icon.png" />
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <div class="container signin">
+      <div class="wrapper-signin">
+        <h1 class="signin-form__title">Verify Your Account</h1>
+        <p class="signin-form__account">
+          Enter the verification code sent to your email or phone.
+        </p>
+        <form action="#" id="verifyForm" class="signin-form">
+          <div class="verification-container">
+            <div class="verification-inputs">
+              <input
+                type="text"
+                maxlength="1"
+                id="code1"
+                class="code-input"
+                oninput="moveFocus(event, 1)"
+                autofocus />
+              <input
+                type="text"
+                maxlength="1"
+                id="code2"
+                class="code-input"
+                oninput="moveFocus(event, 2)" />
+              <input
+                type="text"
+                maxlength="1"
+                id="code3"
+                class="code-input"
+                oninput="moveFocus(event, 3)" />
+              <input
+                type="text"
+                maxlength="1"
+                id="code4"
+                class="code-input"
+                oninput="moveFocus(event, 4)" />
+              <input
+                type="text"
+                maxlength="1"
+                id="code5"
+                class="code-input"
+                oninput="moveFocus(event, 5)" />
+              <input
+                type="text"
+                maxlength="1"
+                id="code6"
+                class="code-input"
+                oninput="moveFocus(event, 6)" />
+            </div>
+          </div>
+          <input type="submit" value="Verify" />
+        </form>
+        <p class="signin-form__account">
+          Didn't receive the code?
+          <a href="#" class="link-Signup">Resend Code</a>
+        </p>
+      </div>
+    </div>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
