@@ -502,7 +502,7 @@ img::selection {
 */
 .header-content {
     text-align: center;
-    margin-top: 20rem;
+    margin-top: 10rem;
     color: var(--white);
 }
 
@@ -1412,6 +1412,10 @@ input[type="checkbox"]:checked::after {
 @media (min-width:576px) {
 	.container {
 		width: 54rem;
+	}
+
+	.body {
+		cursor: none;
 	}
 }
 
