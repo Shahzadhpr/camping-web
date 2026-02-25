@@ -16,6 +16,8 @@ This project is a camping website designed to enhance the user experience in the
 - **HTML**: Core structure of the website.
 - **CSS**: Styling and responsive design.
 - **JavaScript**: Implementation of interactions and dynamic features.
+- **WOW.js**: Scroll animations and visual enhancements  
+- **Animate.css**: Predefined animation st
 
 &nbsp;
 
@@ -57,3 +59,4 @@ Thank you for visiting this repository. I hope you find it useful and inspiring.
 Feel free to leave a star ⭐ or provide feedback!
 
 Best regards, Shahzad ❤️
+
